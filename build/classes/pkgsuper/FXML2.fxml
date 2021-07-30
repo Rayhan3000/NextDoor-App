@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane1" prefHeight="452.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgsuper.FXMLController">
+   <children>
+      <AnchorPane fx:id="pane" layoutY="-1.0" prefHeight="56.0" prefWidth="695.0" style="-fx-background-color: #1a1a00;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXButton fx:id="btn2" layoutX="525.0" layoutY="21.0" onAction="#handlePrint" prefHeight="25.0" prefWidth="169.0" style="-fx-background-color: #e62e00;" text="Buy Product" textFill="#f5f3f3">
+               <font>
+                  <Font name="Ravie" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btn1" layoutY="22.0" onAction="#storeIn" prefHeight="28.0" prefWidth="169.0" style="-fx-background-color: #e62e00;" text="Store In" textFill="WHITE">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="Ravie" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="Ptable" layoutY="223.0" prefHeight="229.0" prefWidth="695.0">
+        <columns>
+            <TableColumn fx:id="no" prefWidth="75.0" text="No" />
+            <TableColumn fx:id="br" minWidth="0.0" prefWidth="129.0" text="Barcode" />
+          <TableColumn fx:id="Pname" prefWidth="148.0" text="Products Name" />
+            <TableColumn fx:id="Pqty" prefWidth="111.0" text="Quantity" />
+          <TableColumn fx:id="Pprice" minWidth="0.0" prefWidth="60.0" text="Price" />
+            <TableColumn fx:id="am" prefWidth="169.0" text="Amount" />
+        </columns>
+      </TableView>
+      <TextField fx:id="Tbox" layoutX="47.0" layoutY="107.0" promptText="Products Name" />
+      <TextField fx:id="Tbox1" layoutX="47.0" layoutY="136.0" promptText="Price" />
+      <TextField fx:id="Tbox2" layoutX="46.0" layoutY="167.0" onAction="#order" promptText="Quantity" />
+      <TextField fx:id="invoice" layoutX="478.0" layoutY="73.0" prefHeight="25.0" prefWidth="174.0" />
+      <DatePicker fx:id="datepicker" layoutX="478.0" layoutY="110.0" />
+      <TextField fx:id="Tbox3" layoutX="47.0" layoutY="77.0" onKeyTyped="#scanProduct" promptText="Barcode" />
+      <Label layoutX="535.0" layoutY="192.0" prefHeight="25.0" prefWidth="65.0" text="Total  : ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label fx:id="lbl" layoutX="615.0" layoutY="194.0" text="0">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

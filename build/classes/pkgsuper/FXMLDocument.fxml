@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="658.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgsuper.FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="285.0" fitWidth="451.0" layoutX="-8.0" layoutY="56.0" opacity="0.87" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <GaussianBlur />
+         </effect>
+         <image>
+            <Image url="@IMAGES/images.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="411.0" layoutY="36.0" prefHeight="315.0" prefWidth="228.0" style="-fx-background-color: #1a1a00;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label fx:id="label" layoutX="47.0" layoutY="37.0" prefHeight="32.0" prefWidth="145.0" text="Sign In Required" textFill="#f8f3f3">
+               <font>
+                  <Font name="Calisto MT" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <JFXButton layoutX="101.0" layoutY="245.0" onAction="#Signin" prefHeight="21.0" prefWidth="76.0" style="-fx-background-color: #e62e00;" text="Sign In" textFill="#f5ebeb">
+               <font>
+                  <Font name="Sitka Display" size="17.0" />
+               </font></JFXButton>
+            <JFXTextField fx:id="Tbox" labelFloat="true" layoutX="40.0" layoutY="106.0" promptText="Username" unFocusColor="#4a3e3e" />
+            <JFXPasswordField fx:id="Pbox" labelFloat="true" layoutX="40.0" layoutY="180.0" promptText="Password" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="6.0" layoutY="190.0" prefHeight="63.0" prefWidth="169.0" text="Welcome&#10;&#10;" textFill="#e62e00">
+         <font>
+            <Font name="Snap ITC" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="244.0" prefHeight="21.0" prefWidth="249.0" text="To Our Management System&#10;">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="53.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@IMAGES/doqwnload.png" />
+         </image>
+         <effect>
+            <Reflection bottomOpacity="0.33" fraction="0.65" topOpacity="0.35" />
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>
